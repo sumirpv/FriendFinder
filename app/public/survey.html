@@ -1,59 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Survey-questions</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <style>
+    body {
+    background-color: rgb(124, 176, 219);
+    }
+
+    .option1 {
+      width: 200px;
+    }
+
+    #dialog {
+      display: none;
+      background-color: rgb(211, 226, 231);
+      width: 800px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+
+    }
+    #t_f_image{
+      height: 300px;
+      width: 300px;
+    }
+    #t_f_name{
+    }
+
+
+
+  </style>
 </head>
+
 <body>
 
-  <div class="container">
-      <h1>Survey questions</h1>
-
-    <div class="row">
-
-      <div class="col-lg-12">
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong>Character Search</strong></h3>
-          </div>
-          <div class="panel-body">
-            <input type="text" id="character-search" class="form-control">
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Search Your Feelings. You know it is true.</button>
-
-            </div>
-          </div>
+  <!-- </div>
+   <div id="dialog">
+    <div class="pop_up">
+        <h1>Your true friend is...</h1><br><br>
+        <div class="results"> 
+        <h3 id="t_f_name"> </h3><br>
+        <img id="t_f_image" src="" alt="" width="auto" height="auto">
         </div>
+    </div>
+    </div> -->
+  <!-- <a id="OpenDialog" href="#">Click here to see you best friend
+      </a> -->
+  <div id="dialog" title="Dialog Title">
+    <h1>Your true friend is...</h1>
+    <br>
+    <br>
+    <div class="results">
+      <h3 id="t_f_name"> Name is </h3>
+      <br>
+      <img id="t_f_image" src="" alt=" Sorry no Photo">
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Survey questions</h1>
+    <div class="row">
+      <div class="col-lg-12">
         <div>
-        <form>
+          <form>
             <div class="form-group">
-                <h2>About You</h2>
-                <label for="exampleInputEmail1">Name (Reaquires)</label>
-                <input type="text" class="form-control" id="name" >
+              <h2>About You</h2>
+              <label for="exampleInputEmail1">Name (Reaquires)</label>
+              <input type="text" class="form-control" id="name">
             </div>
             <div class="form-group">
-                <label for="">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo">
+              <label for="">Link to Photo Image (Required)</label>
+              <input type="text" class="form-control" id="photo">
             </div>
             <hr>
             <div class="form-group">
-                <select  class="form-control">
-                    <option>1(Strongly Disagree)</option>
+              <h2>Question 1</h2>
+              <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
+              <select class="form-control option1" id="option1">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 2</h2>
+              <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
+              <select class="form-control option1" id="option2">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 3</h2>
+              <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+              <select class="form-control option1" id="option3">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 4</h2>
+              <h3>You rarely do something just out of sheer curiosity.</h3>
+              <select class="form-control option1" id="option4">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 5</h2>
+              <h3>People can rarely upset you.</h3>
+              <select class="form-control option1" id="option5">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 6</h2>
+              <h3>It is often difficult for you to relate to other people’s feelings.
+                <h3>
+                  <select class="form-control option1" id="option6">
+                    <option></option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5(Strongly Agree)</option>
-                </select>
+                    <option>5</option>
+                  </select>
             </div>
-            
-            <div class="dropdown">
+            <div class="form-group">
+              <h2>Question 7</h2>
+              <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
+              <select class="form-control option1" id="option7">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 8</h2>
+              <h3>You rarely get carried away by fantasies and ideas.</h3>
+              <select class="form-control option1" id="option8">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 9</h2>
+              <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+              <select class="form-control option1" id="option9">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>Question 10</h2>
+              <h3>You feel more energetic after spending time with a group of people.</h3>
+              <select class="form-control option1" id="option10">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <!-- <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Select an Option
                     <span class="caret"></span>
@@ -68,42 +220,151 @@
                                 <option>5(Strongly Agree)</option>
                             </select>
                 </ul>
-            </div>
-            
+            </div> -->
 
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-                      
+
+            <button id="submit" type="submit" class="btn btn-default">Submit</button>
+          </form>
+
         </div>
 
 
       </div>
     </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <div class="border-right">
+            <a href="/api/viewfriends">API Friends List</a>
+          </div>
+        </li>
+        <li>
+          <div class="border-right1">
+            <a href="https://github.com/sumirpv/FriendFinder">GitHub Repo</a>
+          </div>
+        </li>
+        <li>
+
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script type="text/javascript">
-    $("#search-btn").on("click", function() {
-      var searchedCharacter = $("#character-search").val().trim();
 
-      // Using a RegEx Pattern to remove spaces from searchedCharacter
-      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
 
-      $.get("/api/" + searchedCharacter, function(data) {
-        console.log(data);
-        if (data) {
-          $("#stats").show();
-          $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
-        }
-        else {
-          $("#name").text("The force is not strong with this one. Your character was not found.");
-          $("#stats").hide();
-        }
-      });
+    $(document).ready(function () {
+      // $("#OpenDialog").click(function() {
+      //   $("#dialog").dialog({
+      //     modal: true,
+      //     height: 590,
+      //     width: 1005
+      //   });
+      // });
     });
+
+
+    // // $("#myModal").style.display = "none";
+    // $("#myModal").display="none";
+    //   var span = document.getElementsByClassName("close")[0];
+    //   span.onclick = function() {
+    //     $("#myModal").hide();
+    //   // $("#myModal").style.display = "none";
+
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+      // console.log(" values is "+ $("#option1").val().trim());
+
+      //       var a=["1","2","3"];
+      // for( var i=0; i< a.length;i++){
+      //   console.log(parseInt(a[i]));
+      // }
+
+
+      // var score = [];
+      // score.push(parseInt($("#option1").val()));
+      // score.push(parseInt($("#option2").val()));
+      // score.push(parseInt($("#option3").val()));
+      // score.push(parseInt($("#option4").val()));
+      // score.push(parseInt($("#option5").val()));
+      // score.push(parseInt($("#option6").val()));
+      // score.push(parseInt($("#option7").val()));
+      // score.push(parseInt($("#option8").val()));
+      // score.push(parseInt($("#option9").val()));
+      // score.push(parseInt($("#option10").val()));
+
+      // var scoreNumber=JSON.stringify(scores);
+      //console.log(scoreNumber);
+
+
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+          parseInt($("#option1").val()),
+          parseInt($("#option2").val()),
+          parseInt($("#option3").val()),
+          parseInt($("#option4").val()),
+          parseInt($("#option5").val()),
+          parseInt($("#option6").val()),
+          parseInt($("#option7").val()),
+          parseInt($("#option8").val()),
+          parseInt($("#option9").val()),
+          parseInt($("#option10").val())
+
+        ]
+      };
+
+      //   $("#option1").val(),
+      // $("#option2").val(),
+      // $("#option3").val(),
+      // $("#option4").val(),
+      // $("#option5").val(),
+      // $("#option6").val(),
+      // $("#option7").val(),
+      // $("#option8").val(),
+      // $("#option9").val(),
+      // $("#option10").val()
+
+      console.log(newFriend.name);
+      console.log(newFriend.scores);
+
+      $.post("/api/new", newFriend)
+        .then(function (data) {
+
+          // $('#popup').dialog();
+
+
+          $("#dialog").dialog({
+            modal: true,
+            height: 590,
+            width: 1005
+          });
+
+          $("#t_f_name").text(data.name);
+          $("#t_f_image").attr("src", data.photo);
+          console.log(data);
+
+          // alert("Adding Person...");
+
+          // emptying the form
+          $("#name").val("");
+          $("#photo").val("");
+          $("#option1").val("");
+          $("#option2").val("");
+          $("#option3").val("");
+          $("#option4").val("");
+          $("#option5").val("");
+          $("#option6").val("");
+          $("#option7").val("");
+          $("#option8").val("");
+          $("#option9").val("");
+          $("#option10").val("");
+        });
+    });
+
   </script>
 </body>
+
 </html>
