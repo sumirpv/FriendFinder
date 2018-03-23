@@ -1,14 +1,14 @@
 
 ## Friend Finder - Node and Express Servers
-#Compatibility based application
+##Compatibility based application
 The application will take in results from users' surveys then compare their results against all other users who have completed it. The application will then display the name and picture of the user with the best match overall.
 
 The survey has 10 questions, answers to the survey questions are on a scale of 1-5 based on how much the user agrees or disagrees.
 
-#Live Links:
+##Live Links:
 https://friend-finders-app.herokuapp.com/
 
-#Technical details
+##Technical details
 The application uses Express to handle routing
 
 The server.js file uses the npm packages: express, body-parser, path.
@@ -27,7 +27,7 @@ Each user's results is converted into a simple array of numbers (ex: [5, 1, 4, 4
 
 Then will compare the difference between the user's scores against other users' scores, question by question. Then will add up the differences to calculate the totalDifference.
 
-#Example:
+##Example:
 User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
 User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
 Total Difference: 2 + 1 + 2 = 5
@@ -38,5 +38,5 @@ Once the closest match has been determined, it will display the result back to t
 The result will display both the name and picture of the closest match.
 
 
-![screenshot 2017-04-28 20 16 41](/Users/sumi/Desktop/Vscode/FriendFinder/images/Screen Shot 2018-03-22 at 6.57.35 PM.png)
+![image](https://user-images.githubusercontent.com/26572619/37809240-93ff5bc0-2e0b-11e8-989d-e0a73544142e.png)
 
