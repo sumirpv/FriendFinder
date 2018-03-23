@@ -6,8 +6,8 @@ module.exports = function (app) {
 
   });
   app.post("/api/new", function (req, res) {
-    var newfriend = req.body;
-    console.log(newfriend);
+    var newfriends = req.body;
+    console.log(newfriends);
 
     var bestFriend;
     var difference = 500;
@@ -17,7 +17,7 @@ module.exports = function (app) {
       var sum = 0;
       for (var j = 0; j < friends[i].scores.length; j++) {
         //console.log("2   " + friends[i].scores[j]);
-        sum = sum +( Math.abs(friends[i].scores[j] - parseInt(newfriend.scores[j])));
+        sum = sum +( Math.abs(friends[i].scores[j] - parseInt(newfriends.scores[j])));
       }
       if (sum < difference) {
         difference=sum;
@@ -25,8 +25,22 @@ module.exports = function (app) {
         console.log("4  " + bestFriend.name);
       }
     }
-    friends.push(req.body);
-    console.log(" last name is array  "+newfriend.name);
+    // var newscore=[];
+    // newscore.push(parseInt(newfriends.scores));
+    //var result=arr.map(Number);
+   // console.log("new friend scores "+newfriends.scores);
+   // console.log("new friend scores 1 "+parseInt(newfriends.scores));
+
+    //console.log(newscore);
+    var newfriend ={
+      name : newfriends.name,
+      photo : newfriends.photo,
+      scores :[newfriends.scores]
+    };
+    friends.push(newfriend);
+    console.log(" scores is array1 "+newfriends.scores);
+    console.log(" scores is array2   "+newfriend.scores);
+
     res.json(bestFriend);
     console.log(" true friend is "+bestFriend.name);
   });
