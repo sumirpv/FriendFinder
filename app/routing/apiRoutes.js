@@ -17,11 +17,7 @@ module.exports = function (app) {
       var sum = 0;
       for (var j = 0; j < friends[i].scores.length; j++) {
         //console.log("2   " + friends[i].scores[j]);
-
         sum = sum +( Math.abs(friends[i].scores[j] - parseInt(newfriend.scores[j])));
-        //console.log(typeof parseInt(newfriend.scores[j]) );
-        //console.log("sum "+sum + " array score : "+ friends[i].scores[j]+ " - "+newfriend.scores[j]);
-
       }
       if (sum < difference) {
         difference=sum;
@@ -29,7 +25,7 @@ module.exports = function (app) {
         console.log("4  " + bestFriend.name);
       }
     }
-    friends.push(newfriend);
+    friends.push(req.body);
     console.log(" last name is array  "+newfriend.name);
     res.json(bestFriend);
     console.log(" true friend is "+bestFriend.name);

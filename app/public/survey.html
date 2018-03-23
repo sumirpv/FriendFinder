@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Survey-questions</title>
@@ -12,7 +11,7 @@
   <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
   <style>
     body {
-    background-color: rgb(124, 176, 219);
+      background-color: rgb(172, 202, 226);
     }
 
     .option1 {
@@ -21,7 +20,7 @@
 
     #dialog {
       display: none;
-      background-color: rgb(211, 226, 231);
+      background-color: rgb(231, 211, 223);
       width: 800px;
       border: 1px solid #000;
       border-radius: 4px;
@@ -29,38 +28,41 @@
       font-size: 30px;
 
     }
-    #t_f_image{
+
+    #t_f_image {
       height: 400px;
       width: 400px;
     }
-    #t_f_name{
+    #submit{
+      font-size: 25px;
+      background-color: #338fe0;
+    }
+    .border-right {
+      text-align: center;
+      display: inline-block;
+      width: 130px;
+      font-size: 17px;
+      border-right: 2px inset rgb(51, 122, 183);
     }
 
-
-
+    .border-right1 {
+      margin-left: 10px;
+      font-size: 17px;
+    }
+    .ui-dialog-title{
+      margin-right: 75%;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- </div>
-   <div id="dialog">
-    <div class="pop_up">
-        <h1>Your true friend is...</h1><br><br>
-        <div class="results"> 
-        <h3 id="t_f_name"> </h3><br>
-        <img id="t_f_image" src="" alt="" width="auto" height="auto">
-        </div>
-    </div>
-    </div> -->
-  <!-- <a id="OpenDialog" href="#">Click here to see you best friend
-      </a> -->
   <div id="dialog" title="Dialog Title">
     <h1>Your dream friend is...</h1>
     <div class="results">
       <h3 id="t_f_name"> Name is </h3>
       <br>
-      <img id="t_f_image" src="" alt=" Sorry no Photo">
+      <img id="t_f_image" src="" alt=" Sorry no Photo's avialable">
     </div>
   </div>
 
@@ -72,11 +74,11 @@
           <form>
             <div class="form-group">
               <h2>About You</h2>
-              <label for="exampleInputEmail1">Name (Reaquires)</label>
+              <label for="exampleInputEmail1"><h5>Name (Reaquires)</h5></label>
               <input type="text" class="form-control" id="name">
             </div>
             <div class="form-group">
-              <label for="">Link to Photo Image (Required)</label>
+              <label for=""><h5>Link to Photo Image (Required)</h5></label>
               <input type="text" class="form-control" id="photo">
             </div>
             <hr>
@@ -84,60 +86,60 @@
               <h2>Question 1</h2>
               <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
               <select class="form-control option1" id="option1">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 2</h2>
               <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
               <select class="form-control option1" id="option2">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 3</h2>
               <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
               <select class="form-control option1" id="option3">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 4</h2>
               <h3>You rarely do something just out of sheer curiosity.</h3>
               <select class="form-control option1" id="option4">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 5</h2>
               <h3>People can rarely upset you.</h3>
               <select class="form-control option1" id="option5">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
@@ -145,92 +147,72 @@
               <h3>It is often difficult for you to relate to other people’s feelings.
                 <h3>
                   <select class="form-control option1" id="option6">
-                    <option></option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option value="" disabled selected></option>></option>
+                    <option value="1">1(Strongly Diagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5(Stringly Agree)</option>
                   </select>
             </div>
             <div class="form-group">
               <h2>Question 7</h2>
               <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
               <select class="form-control option1" id="option7">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 8</h2>
               <h3>You rarely get carried away by fantasies and ideas.</h3>
               <select class="form-control option1" id="option8">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 9</h2>
               <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
               <select class="form-control option1" id="option9">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
             <div class="form-group">
               <h2>Question 10</h2>
               <h3>You feel more energetic after spending time with a group of people.</h3>
               <select class="form-control option1" id="option10">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="" disabled selected></option>></option>
+                <option value="1">1(Strongly Diagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5(Stringly Agree)</option>
               </select>
             </div>
 
-            <!-- <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Select an Option
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <input type="text" class="form-control" id="photo">
-                        <select >
-                                <option>1(Strongly Disagree)</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5(Strongly Agree)</option>
-                            </select>
-                </ul>
-            </div> -->
-
-
             <button id="submit" type="submit" class="btn btn-default">Submit</button>
           </form>
-
         </div>
-
-
       </div>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+          <br>
         <li>
           <div class="border-right">
             <a href="/api/viewfriends">API Friends List</a>
@@ -241,59 +223,18 @@
             <a href="https://github.com/sumirpv/FriendFinder">GitHub Repo</a>
           </div>
         </li>
-        <li>
-
-        </li>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       </ul>
     </div>
   </div>
 
   <script type="text/javascript">
-
-
-    $(document).ready(function () {
-      // $("#OpenDialog").click(function() {
-      //   $("#dialog").dialog({
-      //     modal: true,
-      //     height: 590,
-      //     width: 1005
-      //   });
-      // });
-    });
-
-
-    // // $("#myModal").style.display = "none";
-    // $("#myModal").display="none";
-    //   var span = document.getElementsByClassName("close")[0];
-    //   span.onclick = function() {
-    //     $("#myModal").hide();
-    //   // $("#myModal").style.display = "none";
-
     $("#submit").on("click", function (event) {
       event.preventDefault();
-      // console.log(" values is "+ $("#option1").val().trim());
-
-      //       var a=["1","2","3"];
-      // for( var i=0; i< a.length;i++){
-      //   console.log(parseInt(a[i]));
-      // }
-
-
-      // var score = [];
-      // score.push(parseInt($("#option1").val()));
-      // score.push(parseInt($("#option2").val()));
-      // score.push(parseInt($("#option3").val()));
-      // score.push(parseInt($("#option4").val()));
-      // score.push(parseInt($("#option5").val()));
-      // score.push(parseInt($("#option6").val()));
-      // score.push(parseInt($("#option7").val()));
-      // score.push(parseInt($("#option8").val()));
-      // score.push(parseInt($("#option9").val()));
-      // score.push(parseInt($("#option10").val()));
-
-      // var scoreNumber=JSON.stringify(scores);
-      //console.log(scoreNumber);
-
 
       var newFriend = {
         name: $("#name").val().trim(),
@@ -312,27 +253,11 @@
 
         ]
       };
-
-      //   $("#option1").val(),
-      // $("#option2").val(),
-      // $("#option3").val(),
-      // $("#option4").val(),
-      // $("#option5").val(),
-      // $("#option6").val(),
-      // $("#option7").val(),
-      // $("#option8").val(),
-      // $("#option9").val(),
-      // $("#option10").val()
-
       console.log(newFriend.name);
       console.log(newFriend.scores);
 
       $.post("/api/new", newFriend)
         .then(function (data) {
-
-          // $('#popup').dialog();
-
-
           $("#dialog").dialog({
             modal: true,
             height: 590,
@@ -342,9 +267,6 @@
           $("#t_f_name").text(data.name);
           $("#t_f_image").attr("src", data.photo);
           console.log(data);
-
-          // alert("Adding Person...");
-
           // emptying the form
           $("#name").val("");
           $("#photo").val("");
