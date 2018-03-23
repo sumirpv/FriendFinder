@@ -40,7 +40,7 @@ The result will display both the name and picture of the closest match.
 ## ScreenShots:
 ![image](https://user-images.githubusercontent.com/26572619/37809240-93ff5bc0-2e0b-11e8-989d-e0a73544142e.png)
 
-![image](https://user-images.githubusercontent.com/26572619/37809240-93ff5bc0-2e0b-11e8-989d-e0a73544142e.png)
+![image](https://user-images.githubusercontent.com/26572619/37809405-65796c9a-2e0c-11e8-92fd-0bceacb55463.png)
 
 ![image](https://user-images.githubusercontent.com/26572619/37809311-edf87fe4-2e0b-11e8-8b4b-62bd2f9ac9ea.png)
 
